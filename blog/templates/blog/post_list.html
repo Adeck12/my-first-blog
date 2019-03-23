@@ -8,15 +8,10 @@
   </div>
   {% for post in posts %}
     <div>
-      <h2><a href=''> My first post</a></h2>
-      <p> Typing random shit here </p>
-      <p>published: March 23, 2019, 11:59 AM</p>
-    </div>
-    <div>
-      <h2><a href=''> My Second Post </a></h2>
-      <p> More random words that mean nothing </p>
-      <p> published: March 23, 2019, 12 PM </p>
+      <p>published:  {{ post.published_date }}
+      <h2><a href= "">{{ post.title }}</a></h2>
+      <p>{{  post.text|linebreaksbr  }}</p>
       </div>
-      {% endfor%}
+      {% endfor %}
 </body>
 </html>
